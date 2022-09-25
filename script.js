@@ -20,3 +20,25 @@ document.getElementById("resetTimer").addEventListener("click", () => {
   [milliseconds, seconds, minutes, hours] = [0, 0, 0, 0];
   timerRef.innerHTML = "00 : 00 : 00 : 000";
 });
+
+function displayTimer() {
+  milliseconds += 10;
+
+  if (milliseconds == 1000) {
+    milliseconds = 0;
+    seconds++;
+
+    if (seconds == 60) {
+      seconds = 0;
+      minutes++;
+    }
+
+    if (minutes == 60) {
+      minutes = 0;
+      hours++;
+    }
+  }
+}
+
+let h = hours < 10 ? '0' + hours : hours;
+let m = minutes < 10 ?
