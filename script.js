@@ -46,3 +46,5 @@ function displayTimer() {
 
   timerRef.innerHTML = ` ${h} : ${m} : ${s} : ${ms}`;
 }
+
+console.log(`this is the end `);
